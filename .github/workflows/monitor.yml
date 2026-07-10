@@ -1,6 +1,6 @@
 name: Pokemon Center Monitor
 
-on:
+"on":
   workflow_dispatch:
 
 jobs:
