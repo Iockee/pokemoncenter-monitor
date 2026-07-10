@@ -48,16 +48,23 @@ def get_products(html):
 def main():
     html = get_page()
 
+    print("=" * 60)
+    print(f"HTML Länge: {len(html)}")
+    print("=" * 60)
+    print(html[:1500])
+    print("=" * 60)
+
     products = get_products(html)
 
-    print(f"{len(products)} Produkte gefunden\n")
+    print(f"\n{len(products)} Produkte gefunden")
 
     for product in products:
-        print(product["name"])
-        print(product["price"])
-        print(product["availability"])
-        print(product["url"])
-        print("-" * 50)
+        print("-" * 60)
+        print(f"Name: {product['name']}")
+        print(f"Preis: {product['price']}")
+        print(f"Verfügbarkeit: {product['availability']}")
+        print(f"URL: {product['url']}")
+        print(f"MPN: {product['mpn']}")
 
 
 if __name__ == "__main__":
